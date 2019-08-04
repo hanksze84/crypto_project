@@ -13,7 +13,7 @@ fetch('https://api.coingecko.com/api/v3/exchanges/gdax').then(function(res){
       const base = currentTicker.base;
       const target = currentTicker.target; 
       const price = currentTicker.last; 
-    htmlStr = htmlStr + `<div>${base}/${target}<strong>${price}</strong></div>`; 
+    htmlStr = htmlStr + `<div>${base}/${target}${price}</div>`; 
   }
 
   console.log('htmlStr', htmlStr);
