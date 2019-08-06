@@ -11,9 +11,10 @@ fetch('https://api.coingecko.com/api/v3/exchanges/gdax').then(function(res){
   for (let i = 0; i <= tickers.length - 1; i+=1)  {
       const currentTicker = tickers[i]; 
       const base = currentTicker.base;
-      const target = currentTicker.target; 
+      const target = currentTicker.target;
+      const volume = currentTicker.volume;  
       const price = currentTicker.last; 
-    htmlStr = htmlStr + `<div>${base}/${target}${price}</div>`; 
+    htmlStr = htmlStr + `<div>${base}/${target}${price} ${volume}</div>`; 
   }
 
   console.log('htmlStr', htmlStr);
